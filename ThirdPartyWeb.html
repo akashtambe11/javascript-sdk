@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Hoopy SDK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+</head>
+
+<body>
+    <button id="modalbtn"> Open Hoopy </button>
+
+    <!-- OPTION 2 START-->
+    <!-- <div id="alertModal" class="modal">
+        <div class="modal-content">
+            <p class="modalTxt">This is Modal</p>
+            <p class="btnPara"><button class="nextBtn btn btn-primary">Close</button></p>
+        </div>
+    </div> -->
+    <!-- OPTION 2 END-->
+
+    <!-- JS Files -->
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="assets/js/pay.js"></script>
+
+    <!-- OPTION 1 START-->
+    <div id="iframeBody"></div>
+
+    <script>
+        $(document).ready(function () {
+            $(document).off('click', '#modalbtn').on('click', '#modalbtn', function () {
+                let popUpModel = new HoopylightBox();
+                popUpModel.init()
+            })
+        })
+    </script>
+    <!-- OPTION 1 END-->
+</body>
+
+</html>
